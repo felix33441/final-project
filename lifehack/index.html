@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+    <title>Lifehack</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <header>
+        <div class="icon-container">
+            <i class="fas fa-home"></i>
+        </div>
+
+        <div class="logo">
+            <h1>Lifehack</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Jumbotron Section -->
+        <section id="jumbotron">
+            <div class="jumbotron">
+                <h1 class="jumbotron-title">Get Lifehack Tips here!</h1>
+                <div class="header-flex">
+                    <div class="text-section">
+                        <h2 class="jumbotron-text" data-aos="" data-aos-once="true" data-aos-duration="2000"
+                            data-aos-delay="500">
+                            Are you new to lifehack?<br>Learn through <span style="color: #f4a261;">Simple</span>
+                            lifehack!
+                        </h2>
+                        <div class="mini-text-flex">
+                            <p class="mini-text">Learn lifehack here</p>
+                            <button id="icon-up" onclick="changeText()"> <i class="far fa-hand-point-up"></i></button>
+                            <button id="icon-down" class="icon-down">
+                                <i class="far fa-hand-point-down"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="image-section">
+                        <img class="jumbotron-img" src="Assets/lifehack.png" alt="" width="auto" height="300"
+                            data-aos="" data-aos-offset="600">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <article id="project">
+            <h3 class="article-title">The example of Lifehack</h3>
+            <div class="project-container">
+                <div class="project">
+                    <img src="assets/frozen grapes.webp" alt="" width="300px" height="210px">
+                    <h4 class="project-title">Freeze grapes</h4>
+                    <p class="project-description">Freeze the grapes until solid, at least 4 hours or ideally overnight</p>
+                </div>
+                <div class="project">
+                    <img src="assets/lemon.jpeg" alt="" width="300px" height="210px">
+                    <h4 class="project-title">Get more juice from a lemon</h4>
+                    <p class="project-description">Microwave a lemon for 7–10 seconds, then roll it back and forth on
+                        the counter. You'll get more juice with less effort</p>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>

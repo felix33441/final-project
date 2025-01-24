@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+  <style>
+    body {
+      background-image: url('assets/background.jpeg');
+      background-size: cover;
+    }
+
+    /* Custom styling for carousel */
+    .slick-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slick-prev, .slick-next {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    /* Center the images within each skill item */
+    .skill-item {
+      display: flex;
+      flex-direction: column; /* Stack text below the image */
+      justify-content: center; /* Vertically center the content */
+      align-items: center; /* Horizontally center the image */
+      text-align: center; /* Center the text below the image */
+    }
+
+    .skill-item img {
+      width: 100%;           /* Make the image responsive */
+      height: auto;          /* Maintain aspect ratio */
+      max-width: 300px;      /* Limit max width to 300px (adjust as needed) */
+      object-fit: cover;     /* Ensure the images fit nicely in their containers */
+      border-radius: 8px;    /* Optional: adds rounded corners for a cleaner look */
+      margin-bottom: 20px;   /* Adds space below the image */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="icon-container">
+      <i class="fas fa-home"></i>
+    </div>
+
+    <div class="logo">
+      <h1>Lifehack</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+        <li><a href="#about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="section-container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-subtitle">My Introduction</p>
+        <div class="about-image">
+          <img class="blogger-image" src="assets/lifehack.png" alt="Profile Picture">
+        </div>
+        <div class="about-description">
+          <h4>Lifehack</h4>
+          <p>1. any procedure or action that solves a problem, simplifies a task, reduces frustration, etc, in one's everyday life verb</p>
+          <p>2. to live one's life in a way such as to simplify tasks and minimize problems</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lifehack Examples Section -->
+    <section id="skill">
+      <div class="section-container">
+        <h2 class="section-title">LIFEHACK EXAMPLE</h2>
+        <p class="section-subtitle">What I made after learning lifehack</p>
+
+        <!-- Slick Slider -->
+        <div class="skills-slider">
+          <div class="skill-item">
+            <img src="assets/cheese.webp" alt="Scratch">
+            <h4>Wrap your cheese in parchment paper</h4>
+            <p>Did you know that cheese lasts longer when it can 'breathe'? Rather than wrapping your cheddar up in cling film or tin foil, secure it in waxed or greaseproof paper. (You might want to put it in a food container to stop it from stinking out your food in the fridge).</p>
+          </div>
+          <div class="skill-item">
+            <img src="assets/idk.webp" alt="Phaser">
+            <h4>Fold and store bedding inside a pillowcase</h4>
+            <p>This lifehack for life will keep your clean bedding tidy and has the added benefit of keeping them together. No more searching around for a loose pillowcase..</p>
+          </div>
+          <div class="skill-item">
+            <img src="assets/lemon.webp" alt="HTML">
+            <h4>Put lemon juice on your avocado and guacamole to make it keep for longer</h4>
+            <p>No one wants a browning avocado or guacamole. The key to keeping it green is squeezing some lemon or lime juice over it. The citric acid will prevent it from going brown for longer and adds an extra freshness to the flavor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activity">
+      <div class="section-container">
+        <h2 class="section-title">lifehack type</h2>
+        <p class="section-subtitle">Cooking and self-help hacks</p>
+        <div class="activity-flex">
+          <div class="kitchen hacks">
+            <img src="assets/kichen.webp" alt="1">
+          </div>
+          <div class="self-help hacks">
+            <img src="assets/self.jpg" alt="2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Include jQuery (required by Slick Carousel) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Slick Carousel JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Initialize Slick slider
+      $('.skills-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true, // Show previous/next arrows
+        dots: true,   // Show dots navigation
+      });
+    });
+  </script>
+</body>
+
+</html>

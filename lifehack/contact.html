@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Your CSS code here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Form styling */
+        form {
+            margin: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            border-color: #067acd;
+        }
+
+        input[type="submit"] {
+            background-color: #067acd;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #045c91;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header copied from previous pages -->
+    <header>
+        <div class="icon-container">
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="logo">
+            <h1>Lifehack</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <!-- Optional illustration image -->
+            <img src="assets/contact image.jpeg" alt="Contact Illustration" width="300" style="margin-bottom: 20px;">
+
+            <!-- Contact Form -->
+            <form action="https://formsubmit.co/timedooracademy@gmail.com" method="POST" onsubmit="showModal()">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer copied from previous pages -->
+    <footer>
+        <p>© 2025 Lifehack. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p>Your message has been sent successfully!</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Javascript for Modal and Label Animation -->
+    <script>
+        // Modal functions
+        function showModal() {
+            // Show the modal after form submission
+            document.getElementById("successModal").style.display = "block";
+        }
+
+        function closeModal() {
+            // Hide the modal when the "Close" button is clicked
+            document.getElementById("successModal").style.display = "none";
+        }
+
+        // Label focus effect (label moves to the top when clicked)
+        const inputs = document.querySelectorAll('input, textarea');
+
+        inputs.forEach(input => {
+            // When input is focused, move label to the top
+            input.addEventListener('focus', function() {
+                const label = this.previousElementSibling;
+                label.style.fontSize = '12px';  // Smaller size when focused
+                label.style.top = '0';          // Move label to the top
+                label.style.left = '10px';      // Slightly adjust the position
+            });
+
+            // When input is blurred (user leaves the field)
+            input.addEventListener('blur', function() {
+                const label = this.previousElementSibling;
+                // Only reset the label position if the field is empty
+                if (this.value === '') {
+                    label.style.fontSize = '16px';  // Original size when not focused
+                    label.style.top = '10px';       // Original position
+                    label.style.left = '10px';      // Original position
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
